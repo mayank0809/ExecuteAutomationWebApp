@@ -18,9 +18,9 @@ namespace PFServiceClient
             double? salary;
             int? totalDuration;
 
-            salary = employee.Salary;
+            salary = 100;//employee.Salary;
 
-            totalDuration = employee.DurationWorked;
+            totalDuration = 1;//employee.DurationWorked;
 
             //Salary * 18% of basic (considering basic as 30% of salary)
 
@@ -37,12 +37,12 @@ namespace PFServiceClient
 
         public double? GetPfEmployerContribSofar(Employee employee)
         {
-            double? salary;
-            int? totalDuration;
+            double? salary =100;
+            int? totalDuration =1;
 
-            salary = employee.Salary;
+            //salary = employee.Salary;
 
-            totalDuration = employee.DurationWorked;
+            //totalDuration = employee.DurationWorked;
             //Salary * 12% of basic (considering basic as 30% of salary)
 
             //Basic salary
@@ -56,7 +56,7 @@ namespace PFServiceClient
         public bool IsPfEligible(Employee employee)
         {
             double? salary;
-            salary = employee.Salary;
+            salary = 100;//employee.Salary;
 
             if (salary >= 4000)
                 return true;
@@ -66,14 +66,14 @@ namespace PFServiceClient
 
         public double? GetPfEmployeeControlSofarWithId(int empId)
         {
-            double? salary;
-            int? totalDuration;
+            double? salary =100;
+            int? totalDuration=.1;
 
-            using (var employeeEntity = new EmployeeModel())
-            {
-                salary = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.Salary).FirstOrDefault();
-                totalDuration = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.DurationWorked).FirstOrDefault();
-            }
+            //using (var employeeEntity = new EmployeeModel())
+            //{
+            //    salary = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.Salary).FirstOrDefault();
+            //    totalDuration = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.DurationWorked).FirstOrDefault();
+            //}
 
             //Salary * 18% of basic (considering basic as 30% of salary)
 
@@ -90,13 +90,13 @@ namespace PFServiceClient
 
         public double? GetPfEmployerControlSofarWithId(int empId)
         {
-            double? salary;
-            int? totalDuration;
-            using (var employeeEntity = new EmployeeModel())
-            {
-                salary = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.Salary).FirstOrDefault();
-                totalDuration = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.DurationWorked).FirstOrDefault();
-            }
+            double? salary =100;
+            int? totalDuration =1;
+            //using (var employeeEntity = new EmployeeModel())
+            //{
+            //    salary = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.Salary).FirstOrDefault();
+            //    totalDuration = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.DurationWorked).FirstOrDefault();
+            //}
 
             //Salary * 12% of basic (considering basic as 30% of salary)
 
@@ -111,11 +111,11 @@ namespace PFServiceClient
 
         public bool IsPfEligibleWithId(int empId)
         {
-            double? salary;
-            using (var employeeEntity = new EmployeeModel())
-            {
-                salary = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.Salary).FirstOrDefault();
-            }
+            double? salary =100;
+            //using (var employeeEntity = new EmployeeModel())
+            //{
+           //     salary = employeeEntity.Employees.Where(x => x.Id == empId).Select(x => x.Salary).FirstOrDefault();
+            //}
 
             if (salary >= 4000)
                 return true;
