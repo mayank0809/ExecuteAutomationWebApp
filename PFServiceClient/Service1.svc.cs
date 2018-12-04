@@ -67,7 +67,7 @@ namespace PFServiceClient
         public double? GetPfEmployeeControlSofarWithId(int empId)
         {
             double? salary =100;
-            int? totalDuration=.1;
+            int? totalDuration=1;
 
             //using (var employeeEntity = new EmployeeModel())
             //{
