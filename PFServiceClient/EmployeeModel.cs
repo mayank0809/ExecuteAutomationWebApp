@@ -5,7 +5,7 @@ namespace PFServiceClient
     public class EmployeeModel //: DbContext
     {
         public EmployeeModel()
-            : base("name=EmployeeModel")
+            //: base("name=EmployeeModel")
         {
         }
 
